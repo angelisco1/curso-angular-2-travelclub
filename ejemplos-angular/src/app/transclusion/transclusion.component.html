@@ -1,0 +1,19 @@
+<h2>Transclusión</h2>
+
+<app-acordeon>
+  <ul class="otra-clase">
+    <li>La casa del dragón</li>
+    <li>Los anillos del poder</li>
+    <li>...</li>
+  </ul>
+  <p class="footer">Autor: Anónimo</p>
+  <h2 class="title">Lista de series</h2>
+</app-acordeon>
+
+<app-acordeon>
+  <p class="title">Top 3 frameworks JS</p>
+
+  <img width="200" [src]="imagenAngular" alt="Logo de Angular">
+  <img width="200" [src]="imagenAngular" alt="Logo de {{nombreLogo}}">
+  <img width="200" [src]="imagenAngular" alt="Logo de Vue">
+</app-acordeon>
