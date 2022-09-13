@@ -1,0 +1,10 @@
+<h1>Mi propio router de Angular</h1>
+
+<a appMiRouterLink="/inicio">Inicio</a>
+<a appMiRouterLink="/login">Login</a>
+<!-- <a appMiRouterLink="/registro">Registro</a> -->
+<a [appMiRouterLink]="['/admin', 'clientes']">Admin</a>
+
+<button type="button" (click)="login()">Ir a login</button>
+
+<app-mi-router-outlet></app-mi-router-outlet>

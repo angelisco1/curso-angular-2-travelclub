@@ -11,6 +11,9 @@ import { VideoComponent } from './componentes-dinamicos/video/video.component';
 import { AudioComponent } from './componentes-dinamicos/audio/audio.component';
 import { HostDirective } from './componentes-dinamicos/host.directive';
 import { ModalComponent } from './componentes-dinamicos/modal/modal.component';
+import { StoreModule } from '@ngrx/store';
+import { CmpNgrxComponent } from './cmp-ngrx/cmp-ngrx.component';
+import { ContadorComponent } from './cmp-ngrx/contador/contador.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +25,14 @@ import { ModalComponent } from './componentes-dinamicos/modal/modal.component';
     VideoComponent,
     AudioComponent,
     HostDirective,
-    ModalComponent
+    ModalComponent,
+    CmpNgrxComponent,
+    ContadorComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    StoreModule.forRoot({}, {})
   ],
   providers: [],
   bootstrap: [AppComponent]
