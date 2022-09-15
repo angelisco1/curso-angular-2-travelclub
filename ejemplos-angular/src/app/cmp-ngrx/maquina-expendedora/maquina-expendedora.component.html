@@ -1,0 +1,8 @@
+<app-panel-codigo></app-panel-codigo>
+
+
+<p *ngIf="loading; else listaProductos">Cargando la máquina...</p>
+
+<ng-template #listaProductos>
+  <app-lista-productos></app-lista-productos>
+</ng-template>

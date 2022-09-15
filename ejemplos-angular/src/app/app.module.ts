@@ -14,6 +14,14 @@ import { ModalComponent } from './componentes-dinamicos/modal/modal.component';
 import { StoreModule } from '@ngrx/store';
 import { CmpNgrxComponent } from './cmp-ngrx/cmp-ngrx.component';
 import { ContadorComponent } from './cmp-ngrx/contador/contador.component';
+import { AppReducers } from './cmp-ngrx/state/app.state';
+import { MaquinaExpendedoraComponent } from './cmp-ngrx/maquina-expendedora/maquina-expendedora.component';
+import { ListaProductosComponent } from './cmp-ngrx/maquina-expendedora/lista-productos/lista-productos.component';
+import { PanelCodigoComponent } from './cmp-ngrx/maquina-expendedora/panel-codigo/panel-codigo.component';
+import { ProductoComponent } from './cmp-ngrx/maquina-expendedora/producto/producto.component';
+import { EffectsModule } from '@ngrx/effects';
+import { MaquinaExpendedoraEffects } from './cmp-ngrx/state/effects/maquina-expendedora.effects';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,12 +35,18 @@ import { ContadorComponent } from './cmp-ngrx/contador/contador.component';
     HostDirective,
     ModalComponent,
     CmpNgrxComponent,
-    ContadorComponent
+    ContadorComponent,
+    MaquinaExpendedoraComponent,
+    ListaProductosComponent,
+    PanelCodigoComponent,
+    ProductoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({}, {})
+    ReactiveFormsModule,
+    StoreModule.forRoot(AppReducers, {}),
+    EffectsModule.forRoot([MaquinaExpendedoraEffects])
   ],
   providers: [],
   bootstrap: [AppComponent]

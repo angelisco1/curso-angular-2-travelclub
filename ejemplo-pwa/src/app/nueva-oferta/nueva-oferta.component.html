@@ -1,0 +1,15 @@
+<form [formGroup]="formOferta" (ngSubmit)="guardar()">
+  <div>
+    <label for="titulo">Título</label>
+    <input type="text" formControlName="titulo">
+  </div>
+  <div>
+    <label for="empresa">Empresa</label>
+    <input type="text" formControlName="empresa">
+  </div>
+  <div>
+    <label for="salario">Salario</label>
+    <input type="number" formControlName="salario">
+  </div>
+  <button type="submit" [disabled]="formOferta.invalid">Crear oferta</button>
+</form>

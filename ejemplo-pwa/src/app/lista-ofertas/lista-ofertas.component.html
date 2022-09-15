@@ -1,0 +1,6 @@
+<ul>
+  <li *ngFor="let oferta of ofertas">
+    <span>{{oferta.titulo}}</span>
+    <button (click)="verInfoOferta(oferta.id)">+ info</button>
+  </li>
+</ul>

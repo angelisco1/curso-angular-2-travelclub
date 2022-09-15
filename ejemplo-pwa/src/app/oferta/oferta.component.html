@@ -1,0 +1,6 @@
+<div *ngIf="oferta">
+  <h2>{{oferta.titulo}}</h2>
+  <p>Empresa: {{oferta.empresa}}</p>
+  <p>Salario: {{oferta.salario | currency:'EUR'}}</p>
+  <button type="button" (click)="eliminar()">Eliminar</button>
+</div>
