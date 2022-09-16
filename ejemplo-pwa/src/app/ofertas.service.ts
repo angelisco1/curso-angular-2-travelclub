@@ -8,6 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class OfertasService {
   private URL: string = `${environment.urlApi}/curso-angular/angel`
+  private URL_NODE: string = `http://localhost:4201/ofertas`
 
   constructor(private http: HttpClient) { }
 
@@ -34,7 +35,7 @@ export class OfertasService {
   }
 
   createOferta(oferta: any) {
-    return this.http.post(this.URL + '.json', oferta)
+    return this.http.post(this.URL_NODE, oferta)
   }
 
   deleteOferta(id: string) {

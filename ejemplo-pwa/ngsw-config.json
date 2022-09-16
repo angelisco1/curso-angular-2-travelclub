@@ -26,5 +26,18 @@
         ]
       }
     }
+  ],
+  "dataGroups": [
+    {
+      "name": "data",
+      "urls": [
+        "https://fluentjobs-fa22e.firebaseio.com/pro/curso-angular/angel"
+      ],
+      "cacheConfig": {
+        "maxAge": "2m",
+        "maxSize": 5,
+        "strategy": "performance"
+      }
+    }
   ]
 }
